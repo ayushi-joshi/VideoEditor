@@ -42,7 +42,7 @@ const VideoEditor = () => {
  
   return (
     <div  className='flex h-screen'>
-     <div className='aside border-r-2 w-1/12  '>
+     <div className='aside border-r-2 lg:w-1/12 '>
    <div className='flex justify-center items-center mt-2 flex-col'>
    <IoIosMenu size={25} />
    <span className='mt-3 flex flex-col items-center'>
@@ -92,17 +92,17 @@ const VideoEditor = () => {
 
         </div> 
         <div className='flex flex-col h-full w-11/12' >
-        <div className='flex flex-row h-3/4  '>
-     <div className='h-full flex flex-col  w-2/6 p-3'>
-<h1 className='font-bold'>Project Settings</h1>
-<span className='mt-4'>
+        <div className='flex lg:flex-row flex-col h-3/4  '>
+     <div className='h-full flex lg:flex-col lg:w-2/6  p-3'>
+<h1 className='font-bold text-sm lg:text-lg'>Project Settings</h1>
+<span className='mt-4 '>
     <p>Size</p>
-    <span className='flex items-center justify-between border rounded-lg p-2'><button>Original(16.9)</button><BsChevronDown /></span>
+    <span className='flex items-center justify-between border rounded-lg p-2  '><button>Original(16.9)</button><BsChevronDown /></span>
 
 </span>
-<span className='mt-4'>
+<span className='mt-2  ms-2 lg:ms-0'>
     <p>Background</p>
-    <div className='border rounded-lg '>
+    <div className='border rounded-lg   '>
         <span className='flex items-center justify-between p-2'>Color <IoColorFillSharp size={25} /></span>
       <div className='border-t-2'>
         <span className='flex items-center justify-between p-2'>Image <p className='text-sm text-gray-300'>upload</p></span>
@@ -110,14 +110,14 @@ const VideoEditor = () => {
     </div>
     
     </span>
-    <span className='mt-4'>
+    <span className='mt-4  hidden sm:block '>
     <p>Audio</p>
-    <span className='flex items-center justify-between border rounded-lg p-2'><span className='flex items-center'> <PiStarFour className='me-2'/>
+    <span className='flex items-center justify-between border rounded-lg p-2 '><span className='flex items-center'> <PiStarFour className='me-2'/>
 Clean Audio</span><div className='bg-orange-400 rounded h-5 w-5 flex justify-center items-center'><BsLightningChargeFill color='white' /></div>
 </span>
 
 </span>
-<span className='mt-4'>
+<span className='mt-4 hidden sm:block'>
     <p>Duration</p>
     <span className='flex items-center justify-between border rounded-lg p-2'><span className='flex items-center'> 
 Time Duration</span><TbTimeDuration15 size={25} />
@@ -126,29 +126,29 @@ Time Duration</span><TbTimeDuration15 size={25} />
 
 </span>
     </div>
-     <div className='w-4/6  bg-slate-100'>
-<div className='flex justify-between items-center w-full  h-15 p-2'>
+     <div className='lg:w-4/6   bg-slate-100'>
+<div className='flex justify-between items-center lg:me-0  me-8  h-15 lg:p-2'>
    <p>Project Name</p>
   <div className='flex justify-center items-center'>
-  <div className='flex flex-row space-x-2 items-center'>
-<PiArrowBendUpLeftLight size={25}/>
-<PiArrowBendUpRight size={25} />
-<div className='flex bg-gray-100 h-10 w-20 items-center p-2 rounded'>
-<p>Invite</p>
+  <div className='flex flex-row space-x-2 items-center '>
+<PiArrowBendUpLeftLight size={25} className='hidden sm:block'/>
+<PiArrowBendUpRight size={25} className='hidden sm:block' />
+<div className='flex bg-gray-200 h-10 lg:w-20 items-center p-2 rounded'>
+<p className='text-sm'>Invite</p>
 <RiContactsLine className='ms-2' />
 
 </div>
-<div className='flex bg-black h-10 w-20 rounded-lg text-white items-center p-2'>
-<p>Done</p>
+<div className='flex bg-black h-10 lg:w-20 w-15 rounded-lg text-white items-center p-2'>
+<p className='text-sm'>Done</p>
 <MdDone className='ms-2' size={20}/>
 </div>
 </div>
 </div>
 
 </div>
-<div className='flex justify-center items-center p-3 ' style={{height:420}}>
+<div className='flex justify-center items-center lg:p-3 ' style={{height:420}}>
 
-<img  className="h-96 " src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="" />
+<img  className="lg:h-96 h-80 " src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="" />
  
 </div>
 </div>
@@ -157,9 +157,9 @@ Time Duration</span><TbTimeDuration15 size={25} />
       <div className=' h-1/4 border-t-2 w-full flex flex-col '>
 <div className='flex-grow flex flex-row  justify-between'>
 <span className='flex space-x-3  ms-5 items-center'>
-<RiScissorsLine /> <p>Split</p>
-<CiCirclePlus /> <p>Add Media</p>
-<FiMic /> <p>Voiceover</p>
+<RiScissorsLine /> <p className='hidden sm:block'>Split</p>
+<CiCirclePlus /> <p className='hidden sm:block'>Add Media</p>
+<FiMic  /> <p className='hidden sm:block'>Voiceover</p>
 
 
 </span>
@@ -173,18 +173,18 @@ Time Duration</span><TbTimeDuration15 size={25} />
 </span>
 <div className='flex items-center space-x-6'>
 <HiOutlineSpeakerWave size={25}/>
-<FaSearchMinus />
+<FaSearchMinus className='hidden sm:block' />
 <div class=" relative ">
   <input type="range" 
-    class="appearance   h-1 rounded-md  overflow-hidden"/>
+    class="appearance   h-1 w-20 lg:w-32 rounded-md  overflow-hidden"/>
   <div class="flex justify-between mt-2 ">
   
   </div>
   <div class="absolute top-4 right-10 h-4 w-4 bg-blue-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
 </div>
-<FaSearchPlus size={20}/>
-<CiWavePulse1 size={20}/>
-<BiMessageRoundedDetail size={20} />
+<FaSearchPlus size={20} className='hidden sm:block'/>
+<CiWavePulse1 size={20} className='hidden sm:block'/>
+<BiMessageRoundedDetail size={20} className='hidden sm:block'/>
 </div>
 </div>
       </div>
@@ -219,22 +219,22 @@ Time Duration</span><TbTimeDuration15 size={25} />
         <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 1" className="w-14 h-14  cursor-pointer"  />
         <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
         <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14 cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
-        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointerhidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14 cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
+        <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 2" className="w-14 h-14  cursor-pointer hidden sm:block"  />
         </div>
   </div>
       

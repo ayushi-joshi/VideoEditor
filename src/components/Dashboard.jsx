@@ -27,32 +27,32 @@ const Dashboard = () => {
     <div className="aside p-5 w-1/4  h-full">
     <img className="" src="https://static-assets.veed.io/cdn-cgi/image/width=256,quality=75,format=auto/images/logo/veed.io-black.svg" alt=""/>
     <span className="flex flex-row ">
-        <button className="bg-green-300 h-12 w-12 rounded mt-4 text-white font-bold">E</button>
+        <button className="bg-green-300 lg:h-12 lg:w-14 h-8 w-8 rounded mt-4 text-white font-bold">E</button>
     <span className="flex flex-col justify-center items-center mt-3">
-        <span className="flex flex-row items-center ms-8">
-            <h1>Emma Stone...</h1><FaSortDown />
+        <span className="flex flex-row items-center lg:ms-8 ms-2 ">
+            <h1 className='text-sm'>Emma Stone...</h1><FaSortDown />
         </span>
         <p className="text-sm">Free Plan</p>
     </span>
     </span>
     <span className="flex flex-row ">
-        <button className="flex items-center justify-between bg-blue-400 h-10 w-60 rounded-lg p-3 mt-2 text-white">New Video 
+        <button className="flex items-center justify-between bg-blue-400 lg:h-10 lg:w-60 h-10 w-24 text-sm rounded-lg p-3 mt-2 text-white">New Video 
         <GoPlus />
           </button>
          </span>
-         <button className="flex items-center bg-gray-200 h-10 w-60 rounded-lg p-3 mt-2"> <RiHome3Line className='me-2' />
+         <button className="flex items-center bg-gray-200 lg:h-10 lg:w-60 rounded-lg p-3 mt-2"> <RiHome3Line className='me-2' />
 Home</button>
-<div className='flex items-center p-3'><GrTemplate className='me-2' size={15} />Templates</div>
-<div className='flex items-center p-3'><RiFolderVideoLine className='me-2'  />All Videos</div>
-<div className='flex items-center p-3'><SiPodcastindex   className='me-2'/>Podcasts & Shows</div>
-<div className='flex items-center p-3'><TbBrandPagekit  className='me-2'/>Brand Kit</div>
+<div className='flex items-center lg:p-3 mt-3 text-sm'><GrTemplate className='me-2' size={15} />Templates</div>
+<div className='flex items-center lg:p-3 mt-3 text-sm'><RiFolderVideoLine size={15} className='me-2'  />All Videos</div>
+<div className='flex items-center lg:p-3 mt-3 text-sm'><SiPodcastindex  size={15} className='me-2'/>Podcasts & Shows</div>
+<div className='flex items-center lg:p-3 mt-3 text-sm'><TbBrandPagekit  size={15} className='me-2'/>Brand Kit</div>
 
     </div>
-    <div className='section h-screen bg-gray-100 w-3/4 '>
-        <div className='flex flex-row p-4 justify-between  '>
-            <span  className='flex flex-row items-center'>
+    <div className='section lg:h-screen lg:bg-gray-100 w-3/4 '>
+        <div className='flex lg:flex-row flex-col p-4 justify-between  '>
+            <span  className='flex flex-row  items-center'>
             <IoIosArrowBack />
-<div className='flex items-center bg-white w-48 h-10 rounded-lg ms-2 p-2 space-x-20 '> <CiSearch className='me-2' />
+<div className='flex items-center bg-white lg:w-48 lg:h-10 w-52 h-7 rounded-lg ms-2 p-2 space-x-20 '> <CiSearch className='me-2' />
 Search <RxCrossCircled className=' ' size={20}/>
 </div>
             </span>
@@ -69,23 +69,23 @@ Search <RxCrossCircled className=' ' size={20}/>
         </div>
 <div className=' h-1/4 w-full p-5'>
     <h1 className='text-2xl'>Let's create some <span className='font-bold text-2xl'>Videos!</span></h1>
-    <div className='grid grid-cols-4 mt-3'>
-<div className='flex items-center space-x-3 bg-white rounded-lg h-11 p-2  w-44 border'>
+    <div className='grid lg:grid-cols-4 grid-cols-2 mt-3 gap-y-2 gap-x-3'>
+<div className='flex items-center space-x-3 bg-white rounded-lg lg:h-11 p-2 h-10  w-40  lg:w-44 border'>
 <div className='bg-purple-200 h-8 flex items-center justify-center rounded w-7'><RiScissorsLine  color='purple'/></div>
-<p>Create Project</p>
+<p className='text-sm'>Create Project</p>
 </div>
-<div className='flex items-center space-x-3 bg-white rounded-lg h-11 p-2  w-44 border'>
+<div className='flex items-center space-x-3 bg-white rounded-lg lg:h-11 p-2 h-10  w-40 border'>
 <div className='bg-pink-100 h-8 flex items-center justify-center rounded w-7'><CiVideoOn color='red'/></div>
-<p>Record Video</p>
+<p className='text-sm'>Record Video</p>
 </div>
-<div className='flex items-center space-x-3 bg-white rounded-lg h-11 p-2  w-44 border'>
+<div className='flex items-center space-x-3 bg-white rounded-lg lg:h-11 p-2 h-10  lg:w-44 w-40 border'>
 <div className='bg-blue-100 h-8 flex items-center justify-center rounded w-7'><BsBroadcast color='blue' /></div>
 
-<p>Go Live</p>
+<p className='text-sm'>Go Live</p>
 </div>
-<div className='flex items-center space-x-3 bg-white rounded-lg h-11 p-2  w-44 border'>
+<div className='flex items-center space-x-3 bg-white rounded-lg lg:h-11 p-2  lg:w-44 h-10 w-40 border'>
 <div className='bg-red-100 h-8 flex items-center justify-center rounded w-7'><BsMic color='red'/></div>
-<p>Record Podcast </p>
+<p className='text-sm'>Record Podcast </p>
 </div>
 
 </div>
@@ -96,7 +96,7 @@ Search <RxCrossCircled className=' ' size={20}/>
 </p> <BsChevronRight />
 </span>
 </div>
-<div className='grid grid-cols-3 p-2'>
+<div className='grid lg:grid-cols-3 p-2'>
 <div className='flex flex-col'>
 <div className=' h-52 w-80 flex flex-col relative' style={{backgroundImage: `url("https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg")`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
 <div className=' absolute right-2 top-2 bg-orange-500 rounded w-12 flex justify-center text-white'>Draft</div>
