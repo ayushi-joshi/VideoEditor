@@ -33,25 +33,13 @@ import { useState } from 'react';
 import { TiArrowSortedDown } from "react-icons/ti";
 
 const VideoEditor = () => {
-  const buttonRef = useRef(null);
-  const [dragging, setDragging] = useState(false);
+  const [time, setTime] = useState(0);
 
-  const handleDragStart = (e) => {
-    setDragging(true);
+  const handleSeekerChange = (e) => {
+    setTime(e.target.value);
   };
 
-  const handleDrag = (e) => {
-    if (dragging) {
-      const newX = e.clientX;
-      const buttonRect = buttonRef.current.getBoundingClientRect();
-      const newXRelativeToButton = newX - buttonRect.width / 2; 
-      buttonRef.current.style.left = `${newXRelativeToButton}px`;
-    }
-  };
-
-  const handleDragEnd = (e) => {
-    setDragging(false);
-  };
+ 
   return (
     <div  className='flex h-screen'>
      <div className='aside border-r-2 w-1/12  '>
@@ -211,23 +199,20 @@ Time Duration</span><TbTimeDuration15 size={25} />
  </div>
  
 
+ <div style={{ width: '100%', margin: '5px auto' }}>
+      <input
+        type="range"
+         onChange={handleSeekerChange}
+        style={{ width: '100%' }}
+      />
+      
+
+    </div>
+
+
  
 
-
- <div className='relative '>
-<button  ref={buttonRef}
-        className='flex absolute'
-        style={{ left: 0 }} 
-        draggable="true"
-        onDragStart={handleDragStart}
-        onDrag={handleDrag}
-        onDragEnd={handleDragEnd}>
-<TiArrowSortedDown size={35} color='blue' className='absolute left-4 appearance-none cursor-pointer'/>
-
-</button>
-
- </div> 
-      <div className="flex items-center justify-center mt-8">
+      <div className="flex items-center justify-center ">
       <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 1" className="w-14 h-14  cursor-pointer"  />
         <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 1" className="w-14 h-14  cursor-pointer"  />
         <img src="https://static.wixstatic.com/media/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg/v1/fill/w_1211,h_632,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/38a4e9_34c69a2a418e42179e3b2a362d752625f000.jpg" alt="Image 1" className="w-14 h-14  cursor-pointer"  />
